@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>World Surface Temps</title>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/output.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="chartBlock">
+        <h1 class="text-center header">
+          Monthly Global Land-Surface Temperatures
+          <br />
+          <span class="small">1753 - 2015</span>
+          <p class="text-center">
+            Temperatures are in Celsius and reported as anomalies relative to the Jan 1951-Dec 1980 average.
+            <br />
+            Estimated Jan 1951-Dec 1980 absolute temperature &deg;C 8.66 +/- 0.07
+          </p>
+        </h1>
+        <div id="chart"></div>
+        <div class="footer">
+          Source: https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/global-temperature.json
+        </div>
+      </div>
+    </div> <!-- End container fluid -->
+
+    <!-- D3 CDN -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+    <!-- Script with D3 code -->
+    <script type="text/javascript" src="./JS/script.js"></script>
+  </body>
+</html>
