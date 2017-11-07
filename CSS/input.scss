@@ -1,0 +1,67 @@
+// Google fonts
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+
+
+// Variables
+$headerFonts: 'Helvetica Neue';
+$textFonts: 'Cabin Condensed', 'Helvetica Neue', sans-serif;
+$black: #000;
+$white: #fff;
+$darkGray: #93a1a1;
+$beige: #E7D9BE;
+
+// Mixins
+@mixin borderRad($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+// CSS
+body {
+  font-family: $textFonts;
+  background-color: $beige;
+}
+
+.chartBlock {
+  display: block;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: $white;
+  box-shadow: 2px 2px 2px 2px $darkGray;
+  @include borderRad(5px);
+
+  .header {
+    font-family: $headerFonts;
+    margin-bottom: -20px;
+    p {
+      font-size: 0.25em;
+    }
+  }
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: $black;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 10px;
+  color: $white;
+  background-color: darken($darkGray, 30%);
+  opacity: 0;
+  @include borderRad(5px);
+}
+
+.legendText {
+  font-size: 9pt;
+}
+
+.footer {
+  font-size: 12px;
+  margin: 10px 10px 15px;
+}
